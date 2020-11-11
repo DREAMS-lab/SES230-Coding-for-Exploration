@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 class Robot:
     def __init__(self, id, x,y,z):
@@ -48,7 +49,6 @@ class UnderwaterDrone(Robot):
         self.z = self.z - np.random.normal(1,1)
         return self.id, self.getPose()
 
-import matplotlib.pyplot as plt
 robots = [(UnderwaterDrone('uDrone', 0, 0)), (AirDrone('eagle', 0, 0)), (RobotBoat('robo-boat-o', 0, 0))]
 
 poses = {}
